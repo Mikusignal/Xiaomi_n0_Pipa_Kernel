@@ -70,12 +70,13 @@ config DUMMY
 	  To compile this driver as a module, choose M here: the module
 	  will be called dummy.
 
-	+config OPLUS_FEATURE_VIRTUAL_NET
-+	tristate "Oplus virtual net device for datashare"
-+	depends on NETFILTER
-+	help
-+	  This adds the ovnet virtual network device used by Oplus
-+	  communication sharing data path.
+config OPLUS_FEATURE_VIRTUAL_NET
+	tristate "Oplus virtual net device for datashare"
+	depends on NETFILTER
+	help
+	  This adds the ovnet virtual network device used by Oplus
+	  communication sharing data path.
+
 config WIREGUARD
 	tristate "WireGuard secure network tunnel"
 	depends on NET && INET
